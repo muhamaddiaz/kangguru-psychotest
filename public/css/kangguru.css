@@ -1,0 +1,219 @@
+/* Navbar Class */
+.navbar-custom {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-grow: inherit;
+    background-color: snow;
+    z-index: 100;
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    animation-name: anim-navbar-custom;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+}
+
+.navbar-custom-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-custom-menu a {
+    display: inline-block;
+    font-weight: 700;
+}
+
+.navbar-custom-menu a:hover {
+    text-decoration: none;
+}
+
+.navbar-custom-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-menu-active {
+    transform: scale(1);
+}
+
+.navbar-custom-item > .navbar-hover-anim {
+    position: absolute;
+    transition-duration: .4s;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(86, 61, 124);
+    margin-top: -5px;
+    transform: scale(0);
+}
+
+.navbar-custom-item:hover .navbar-hover-anim {
+    transform: scale(1);
+}
+
+.navbar-custom-brand {
+    font-weight: 900;
+    font-size: 1.3rem;
+    padding: 16px 20px;
+    color: rgb(86, 61, 124);
+}
+
+.navbar-custom-brand:hover {
+    text-decoration: none;
+}
+
+.navbar-custom-menu a {
+    padding: 20px 20px;
+    color: rgb(86, 61, 124);
+}
+
+/* Intro section */
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.button-intro-custom {
+    position: relative;
+    background-color: transparent;
+    padding: 10px 25px;
+    border: 3px solid rgb(86, 61, 124);
+    border-radius: 20px;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+.button-intro-custom .button-animation {
+    position: absolute;
+    transition-duration: .4s;
+    width: 100%;
+    height: 500px;
+    left: 0;
+    bottom: 160%;
+    transform: skewY(15deg);
+    background-color: rgb(86, 61, 124);
+    z-index: -1;
+    cursor: pointer;
+}
+
+.button-intro-custom:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.button-intro-custom:hover .button-animation {
+    bottom: -60%;
+    cursor: pointer;
+}
+
+/* Team class */
+
+.team {
+    width: 100%;
+    margin-bottom: 60px;
+    background-color: snow;
+}
+
+/* introduction */
+
+.start-test-desc {
+    display: flex;
+    flex-flow: column;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Universal Class */
+
+.bg-intro {
+    background-image: url(background-main.jpg);
+}
+
+.bg-purple {
+    background-color: rgb(86, 61, 124);
+}
+
+.txt-purple {
+    color: rgb(86, 61, 124);
+}
+
+.quotes {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.testimoni-1 {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position-y: -20px;
+    background-attachment: fixed;
+}
+
+.faded-testi {
+    text-align: center;
+    padding: 200px 0;
+    background-color: rgba(86, 61, 124, .8);
+}
+
+.messi-bg {
+    background-image: url(../images/messi.jpg);
+}
+
+.dybala-bg {
+    background-image: url(../images/dybala.jpg);
+}
+
+.py-4 {
+    animation-name: reload-animate;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+    padding: 0 !important;
+}
+
+/* Register */
+
+.register-footer {
+    background-image: url(../images/background-main.jpg);
+}
+
+.register-footer-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    color: white
+}
+
+@keyframes anim-navbar-custom {
+    from {
+        box-shadow: 0px 0px 0px grey;
+        opacity: 0;
+    }
+    to {
+        box-shadow: 0px 0px 5px grey;
+        opacity: 1;
+    }
+}
+
+@keyframes reload-animate {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
